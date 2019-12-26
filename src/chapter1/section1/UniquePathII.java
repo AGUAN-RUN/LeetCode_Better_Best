@@ -1,5 +1,9 @@
 package chapter1.section1;
-
+/*一个机器人位于一个 m x n 网格的左上角
+        机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角
+        现在考虑网格中有障碍物。那么从左上角到右下角将会有多少条不同的路径？
+        网格中的障碍物和空位置分别用 1 和 0 来表示
+        说明：m 和 n 的值均不超过 100。*/
 public class UniquePathII {
     //该算法时间复杂度为m*n，使用了M*N空间
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
