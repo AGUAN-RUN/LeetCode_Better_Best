@@ -1,7 +1,7 @@
 package chapter1.section1;
 
 import java.util.Arrays;
-    //在二的基础上优化了空间，也缩减了时间，时间复杂度依然为  m*n
+    //在二的基础上优化了空间，时间复杂度依然为  m*n
 public class UniquePath3 {
     public int uniquePaths(int m, int n) {
         int[] cur =new int[n];
