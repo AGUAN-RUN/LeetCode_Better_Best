@@ -11,5 +11,6 @@ public class ClimbingStairs2 {
             resultArray[i]=resultArray[i-2]+resultArray[i-1];
         }
         return resultArray[n-1];
+
     }
 }
