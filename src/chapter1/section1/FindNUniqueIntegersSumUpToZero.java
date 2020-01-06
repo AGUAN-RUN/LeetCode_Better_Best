@@ -1,6 +1,6 @@
 package chapter1.section1;
 
-public class FindNUniqueIntegersSumuptoZero {
+public class FindNUniqueIntegersSumUpToZero {
     public int[] sumZero(int n) {
         if(n<=0)return null;
         boolean isDouble=n%2==0?true:false;
