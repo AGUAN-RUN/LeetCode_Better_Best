@@ -1,7 +1,6 @@
 package chapter1.section1;
 
-
-class SearchInRotatedSortedArrayII {
+public class SearchInRotatedSortedArrayII {
     public boolean search(int[] nums, int target) {
         //尝试O(lgn)复杂度的算法，二分找旋转点，然后在二分找到目标元素
         //一没有旋转，二旋转了，可能有大量重复元素，甚至全部重复
