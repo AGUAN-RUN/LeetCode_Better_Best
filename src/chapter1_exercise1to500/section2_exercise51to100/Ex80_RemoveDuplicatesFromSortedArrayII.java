@@ -1,6 +1,6 @@
 package chapter1_exercise1to500.section2_exercise51to100;
 
-public class Ex82_RemoveDuplicatesFromSortedArrayII {
+public class Ex80_RemoveDuplicatesFromSortedArrayII {
     public int removeDuplicates(int[] nums) {
         //这道题要用到指针
         if(nums==null||nums.length==0)return 0;

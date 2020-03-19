@@ -1,8 +1,8 @@
-package chapter1_exercise1to500.section2_exercise51to100;
+package chapter3_exercise1001to1500.section5_exercise1301to1350;
 
 import java.util.Arrays;
 
-public class Ex83_JumpGameIII {
+public class Ex1306_JumpGameIII {
     public boolean canReach(int[] arr, int start) {
         if(arr[start]==0)return true;
         boolean[]isExcute=new boolean[arr.length];
