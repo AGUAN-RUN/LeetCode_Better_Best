@@ -21,9 +21,8 @@ public class Ex86_PartitionList {
             }
             head=head.next;
         }
-        if(node1.next==null){
-            return node2.next;
-        }
+        //下面这行其实可以去掉，因为后面的返回代码其实已经包含了这种情况
+        if(node1.next==null)return node2.next;
         node1Tem.next=node2.next;
         return node1.next;
     }
