@@ -1,4 +1,4 @@
-package chapter2_exercise1001to1500.section5_exercise1301to1350;
+package chapter3_exercise1001to1500.section5_exercise1301to1350;
 
 import java.util.ArrayList;
 import java.util.List;

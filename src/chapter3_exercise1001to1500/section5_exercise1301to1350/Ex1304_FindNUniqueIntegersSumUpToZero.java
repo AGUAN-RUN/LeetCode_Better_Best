@@ -1,4 +1,4 @@
-package chapter2_exercise1001to1500.section5_exercise1301to1350;
+package chapter3_exercise1001to1500.section5_exercise1301to1350;
 
 public class Ex1304_FindNUniqueIntegersSumUpToZero {
     public int[] sumZero(int n) {

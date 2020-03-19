@@ -1,5 +1,7 @@
 package chapter1_exercise1to500.section2_exercise51to100;
 
+import commons.ListNode;
+
 public class Ex82_RemoveDuplicatesFromSortedListII {
     public ListNode deleteDuplicates(ListNode head) {
         if(head==null)return null;
