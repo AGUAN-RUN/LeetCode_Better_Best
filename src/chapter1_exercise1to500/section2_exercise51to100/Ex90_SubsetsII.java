@@ -6,6 +6,6 @@ import java.util.List;
 public class Ex90_SubsetsII {
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>>result = new ArrayList<List<Integer>>();
-
+        return  null;
     }
 }
