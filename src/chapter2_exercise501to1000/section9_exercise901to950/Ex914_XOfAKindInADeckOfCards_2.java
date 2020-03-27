@@ -13,8 +13,7 @@ import java.util.Map;
 
 public class Ex914_XOfAKindInADeckOfCards_2 {
     //先计算每种不同数字卡牌各有多少张。如果要实现分组，则不同数字的卡牌张数之间必须有一个不为1的最大公约数
-    //可以从以卡牌张数最小的牌为基准
-    //以下算法测试用例执行时间打败 6.35%的用户，效率低，需改进使用最大公约数算法，并分析这个算法和改进算法的时间复杂度
+    //测试用例时间打败6.64?  原因系  hashmap在这里完全可以用一个较大数组代替，使用hashmap处理数据导致效率大幅降低
     public boolean hasGroupsSizeX(int[] deck) {
         if(deck==null||deck.length<2)return false;
         //先统计张数
@@ -36,16 +35,7 @@ public class Ex914_XOfAKindInADeckOfCards_2 {
         return true;
     }
     public int gcdWork(int x,int y){
-        if(y>x){
-            int val=x;
-            x=y;
-            y=val;
-        }
         if(x%y==0)return y;
         return gcdWork(y,x%y);
-    }
-    public static void main(String[] args) {
-        int[] nums={1,2,3,4,4,3,2,1};
-        new Ex914_XOfAKindInADeckOfCards_2().hasGroupsSizeX(nums);
     }
 }
