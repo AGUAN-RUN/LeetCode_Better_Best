@@ -14,7 +14,7 @@ import java.util.Map;
 public class Ex914_XOfAKindInADeckOfCards {
     //先计算每种不同数字卡牌各有多少张。如果要实现分组，则不同数字的卡牌张数之间必须有一个不为1的公约数
     //可以从以卡牌张数最小的牌为基准
-    //以下算法测试用例执行时间打败 6.35%的用户，效率低，需改进
+    //以下算法测试用例执行时间打败 6.35%的用户，效率低，需改进使用最大公约数算法，并分析这个算法和改进算法的时间复杂度
     public boolean hasGroupsSizeX(int[] deck) {
         if(deck==null||deck.length<2)return false;
         //先统计张数
