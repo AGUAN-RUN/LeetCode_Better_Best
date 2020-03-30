@@ -1,9 +1,6 @@
 package chapter1_exercise1to500.section2_exercise51to100;
 /*Given n, how many structurally unique BST's (binary search trees) that store values 1 ... n?
-
-来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/unique-binary-search-trees
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。*/
+*/
 public class Ex96_UniqueBinarySearchTrees {
     //未优化，下一轮优化将把已计算的n,numTrees(int n)保存在map中，如果map中能直接取到对于输入n，函数的值，将直接在map中取值
     //测试用例时间3702 ms 在所有 Java 提交中击败了 5.00% 的用户
