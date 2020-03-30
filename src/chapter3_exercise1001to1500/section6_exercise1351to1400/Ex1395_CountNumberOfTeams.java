@@ -8,11 +8,6 @@ Choose 3 soldiers with index (i, j, k) with rating (rating[i], rating[j], ratin
 A team is valid if:  (rating[i] < rating[j] < rating[k]) or (rating[i] > rating[j] > rating[k]) where (0 <= i < j < k < n).
 Return the number of teams you can form given the conditions. (soldiers can be part of multiple teams).
 
-来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/count-number-of-teams
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-
-
 Constraints:
 
 n == rating.length

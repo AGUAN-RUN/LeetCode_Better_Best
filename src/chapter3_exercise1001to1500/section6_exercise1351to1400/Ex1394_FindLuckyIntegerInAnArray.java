@@ -4,10 +4,6 @@ package chapter3_exercise1001to1500.section6_exercise1351to1400;
 
 Return a lucky integer in the array. If there are multiple lucky integers return the largest of them. If there is no lucky integer return -1
 
-来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/find-lucky-integer-in-an-array
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-
 Constraints:
 
 1 <= arr.length <= 500
