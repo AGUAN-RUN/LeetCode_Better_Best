@@ -14,7 +14,7 @@ public class Ex95_UniqueBinarySearchTreesII {
 
 
     //得到左子树集合，得到右子树集合,嵌套遍历出结果
-    //用时2ms   击败85%
+    //用时2ms   击败85%          代码冗长，需要优化代码结构
     public List<TreeNode> generateTrees(int n) {
         List<TreeNode>result=new ArrayList<>();
         if(n<=0)return result;
