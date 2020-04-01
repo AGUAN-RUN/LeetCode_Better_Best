@@ -22,6 +22,7 @@ Return an answer array (of length seq.length) that encodes such a choice of A a
 public class Ex1111_MaximumNestingDepthOfTwoValidParenthesesStrings {
     public int[] maxDepthAfterSplit(String seq) {
         //左右均匀，深度最小,A和B，满足有效括号字符串条件同时，连续左括号尽量最小
+        //1ms  击败100%
         char[]seqs=seq.toCharArray();
         int[]result=new int[seqs.length];
         char char1=seqs[0];
