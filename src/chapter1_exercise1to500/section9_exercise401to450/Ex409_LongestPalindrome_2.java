@@ -1,4 +1,4 @@
-package chapter1_exercise1to500.section9_exercise401toexercise450;
+package chapter1_exercise1to500.section9_exercise401to450;
 
 public class Ex409_LongestPalindrome_2 {
     public int longestPalindrome(String s) {
