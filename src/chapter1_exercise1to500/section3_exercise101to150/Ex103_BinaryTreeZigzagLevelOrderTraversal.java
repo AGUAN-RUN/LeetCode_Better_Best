@@ -9,6 +9,7 @@ import java.util.List;
 */
 public class Ex103_BinaryTreeZigzagLevelOrderTraversal {
     //在102题的基础上，增加一个反转的标志位即可，不同的标志位用不同的顺序遍历。遍历完一层后，就改变标志位
+    //1ms 击败98%
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>>result=new ArrayList<>();
         if(root==null)return result;
