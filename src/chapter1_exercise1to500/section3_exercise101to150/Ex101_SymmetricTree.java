@@ -4,6 +4,7 @@ import commons.TreeNode;
 
 /*Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
 */
+
 public class Ex101_SymmetricTree{
     //1ms 击败45%
     public boolean isSymmetric(TreeNode root) {
