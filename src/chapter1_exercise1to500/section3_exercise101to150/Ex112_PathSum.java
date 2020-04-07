@@ -8,6 +8,8 @@ Note: A leaf is a node with no children.
 。*/
 public class Ex112_PathSum {
     //不使用MAP等容器，直接改变树的子节点的值来计算从跟到叶子的加总
+
+    //击败100%
     public boolean hasPathSum(TreeNode root, int sum) {
         //注意第一个root可能是null
         if(root==null)return false;
