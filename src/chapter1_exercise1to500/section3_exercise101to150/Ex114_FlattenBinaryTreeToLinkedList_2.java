@@ -4,7 +4,7 @@ import commons.TreeNode;
 
 /*Given a binary tree, flatten it to a linked list in-place.*/
 public class Ex114_FlattenBinaryTreeToLinkedList_2 {
-   //原来可以这样递归系列，别人家的代码
+   //原来可以这样系列，别人家的代码
    public void flatten(TreeNode root) {
        if(root==null){
            return ;
