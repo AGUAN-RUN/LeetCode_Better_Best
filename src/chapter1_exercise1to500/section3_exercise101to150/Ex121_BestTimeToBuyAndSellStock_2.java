@@ -7,6 +7,8 @@ Note that you cannot sell a stock before you buy one.
 */
 public class Ex121_BestTimeToBuyAndSellStock_2 {
     //分治法，优于暴力求解  一个连续子数组  要么都在左边，要么都在右边，要么横跨中间
+
+    //用时3ms，大大优于暴力算罚 但是也只击败33  尝试设计时间复杂度为O(n)的算法
     public int maxProfit(int[] prices) {
         if(prices==null||prices.length<2)return 0;
         int[]nums=new int[prices.length-1];

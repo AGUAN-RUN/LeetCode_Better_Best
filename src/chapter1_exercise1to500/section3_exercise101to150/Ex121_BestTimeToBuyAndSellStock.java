@@ -7,6 +7,8 @@ Note that you cannot sell a stock before you buy one.
 */
 public class Ex121_BestTimeToBuyAndSellStock {
     //暴力求解法
+
+    //用例执行时间333ms
     public int maxProfit(int[] prices) {
         if(prices==null||prices.length<2)return 0;
         int result=0;//我可以不买
