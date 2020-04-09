@@ -20,5 +20,12 @@ public class Ex121_BestTimeToBuyAndSellStock_4 {
             if (prices[i] < min) min = prices[i];
         }
         return max;
+       /* int dp_i10 = 0, dp_i11 = Integer.MIN_VALUE;
+        for (int price : prices) {
+            dp_i10 = Math.max(dp_i10, dp_i11 + price);
+            dp_i11 = Math.max(dp_i11, -price);
+        }
+        return dp_i10;*/
     }
+
 }
