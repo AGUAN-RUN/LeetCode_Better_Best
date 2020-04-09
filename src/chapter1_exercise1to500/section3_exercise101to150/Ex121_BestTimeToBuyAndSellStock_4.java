@@ -9,8 +9,16 @@ public class Ex121_BestTimeToBuyAndSellStock_4 {
     //尝试设计时间复杂度为O(n)的算法
     //一个更为简单直接有针对性的算法
 
-    //3和4 为什么对 写出分析过程
+    //1ms 击败99%
     public int maxProfit(int[] prices) {
-
-     ｝
+        if (prices == null || prices.length < 2) return 0;
+        int min = prices[0];
+        int max = 0;
+        for (int i = 1; i < prices.length; i++) {
+            int value = prices[i] - min;
+            max = max < value ? value : max;
+            if (prices[i] < min) min = prices[i];
+        }
+        return max;
+    }
 }
