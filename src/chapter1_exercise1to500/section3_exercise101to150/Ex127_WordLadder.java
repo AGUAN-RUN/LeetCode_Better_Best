@@ -35,6 +35,7 @@ public class Ex127_WordLadder {
         if(beginWords.size()==0)return 0;
         return ladderLengthWorker(beginWords,endWord,wordList,2);
     }
+    //时间复杂度为beginWords.length*wordList.length*f(单词长度)
     public int ladderLengthWorker(List<String>beginWords,String endWord,List<String>wordList,int deep){
         List<String>nextWords=new ArrayList<>();
         for(int i=0;i<beginWords.size();i++){
