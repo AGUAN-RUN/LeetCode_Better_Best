@@ -5,7 +5,7 @@ import commons.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
-
+/*Given a binary tree, return the inorder traversal of its nodes' values.*/
 public class Ex94_BinaryTreeInorderTraversal_2 {
     //迭代算法，使用栈辅助
     public List<Integer> inorderTraversal(TreeNode root) {
@@ -20,7 +20,7 @@ public class Ex94_BinaryTreeInorderTraversal_2 {
             }
             root=res.pop();
             result.add(root.val);
-            root=root.left;
+            root=root.right;
         }
         return result;
     }
