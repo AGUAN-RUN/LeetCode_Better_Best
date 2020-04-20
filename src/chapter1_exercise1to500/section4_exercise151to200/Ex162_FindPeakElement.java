@@ -7,7 +7,7 @@ You may imagine that nums[-1] = nums[n] = -∞.
 Note:
 Your solution should be in logarithmic complexity.
 */
-public class Ex_162_FindPeakElement {
+public class Ex162_FindPeakElement {
     //左边递增，右边递减  必有峰值
     //用时0ms  击败100%的用户
     public int findPeakElement(int[] nums) {
