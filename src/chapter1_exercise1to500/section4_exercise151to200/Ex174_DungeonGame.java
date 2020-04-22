@@ -16,27 +16,30 @@ Any room can contain threats or power-ups, even the first room the knight enters
 */
 public class Ex174_DungeonGame {
     //动态规划
-    
-    //反方向求解更为简单
+    //JAVA用时2ms  击败96.40%
+    //反方向求解更为简单   从终点到起点计算出所有格子到终点需要的最低血量
     public int calculateMinimumHP(int[][] dungeon) {
-        //第一行
-        int n=dungeon.length;
-        int m=dungeon[0].length;
-        for(int i=dungeon[0].length-1;i>=0;i--){
-            dungeon[0][i]=dungeon[0][i]+dungeon[0][i-1];
+        //最后一行
+        int n=dungeon.length-1;
+        int m=dungeon[0].length-1;
+        int value;
+        for(int i=m-1;i>=0;i--){
+            value=dungeon[n][i+1]>0?0:dungeon[n][i+1];
+            dungeon[n][i]=dungeon[n][i]+value;
         }
-        //第一列
-        for(int i=1;i<dungeon.length;i++){
-            dungeon[i][0]=dungeon[i][0]+dungeon[i-1][0];
+        //最后一列
+        for(int i=n-1;i>=0;i--){
+            value=dungeon[i+1][m]>0?0:dungeon[i+1][m];
+            dungeon[i][m]=dungeon[i][m]+value;
         }
-
-        for(int i=1;i<dungeon.length;i++){
-            for(int j=1;j<dungeon[0].length;j++){
-                int val=dungeon[i-1][j]>dungeon[i][j-1]?dungeon[i-1][j]:dungeon[i][j-1];
-                dungeon[i][j]+=val;
+        //统计的过程自底向上，自右到左，相邻有关，相隔无关
+        for(int i=n-1;i>=0;i--){
+            for(int j=m-1;j>=0;j--){
+                value=dungeon[i+1][j]>dungeon[i][j+1]?dungeon[i+1][j]:dungeon[i][j+1];
+                value=value>0?0:value;
+                dungeon[i][j]+=value;
             }
         }
-        int result=dungeon[dungeon.length-1][dungeon[0].length-1];
-        return result>0?0:result;
+        return dungeon[0][0]>0?0:dungeon[0][0];
     }
 }
