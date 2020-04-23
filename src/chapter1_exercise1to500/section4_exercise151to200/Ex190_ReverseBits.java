@@ -15,15 +15,23 @@ If this function is called many times, how would you optimize it?
 public class Ex190_ReverseBits {
     // you need treat n as an unsigned value
     public int reverseBits(int n) {
-      String s=Integer.toBinaryString(n);
-      char[]chs=s.toCharArray();
-      int i=0,j=chs.length-1;
-      while(i<j){
-          char c=chs[i];
-          chs[i]=chs[j];
-          chs[j]=c;
-      }
-
-
+        int i=1;
+        int j=1<<31;
+        int st=31;
+        int result=0;
+        while(st>0){
+            //注意java中  >>有符号右移 符号位不会移动 根据题目要求 这里应该使用>>>(无符号右移)移动符号位
+            result=result|((n>>>st)&i)|((n<<st)&j);
+            st-=2;
+            i=i<<1;
+            j=j>>>1;
+        }
+        return result;
     }
+    public static void main(String[] args) {
+        Ex190_ReverseBits test=new Ex190_ReverseBits();
+        test.reverseBits(67);
+    }
+
+
 }
