@@ -7,6 +7,8 @@ All DNA is composed of a series of nucleotides abbreviated as A, C, G, and T, fo
 When studying DNA, it is sometimes useful to identify repeated sequences within the DNA.
 Write a function to find all the 10-letter-long sequences (substrings) that occur more than once in a DNA molecule.
 */
+
+//以下算法  6ms 击败100%的java提交
 public class Ex187_RepeatedDNASequences_2 {
     //使用数组来做辅助容器，数组共1<<20位，数组下标转化20位2进制数，对应A，C，T，G四个字符能组成的所有十位字符串
     //两位二进制对应一个字符  00--'A'  01--'C'  10--'T'  11 --'G'
