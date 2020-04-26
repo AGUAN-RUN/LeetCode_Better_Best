@@ -38,6 +38,8 @@ s consists of only lowercase English letters and/or digits.
 * */
 public class Ex1417_ReformatTheString {
     //使用两个数组,一个存放数字，一个存放字母
+
+    //用时2ms 击败100%的用户
     public String reformat(String s) {
         if(s==null||s.length()==0)return s;
         char[]strs=s.toCharArray();
