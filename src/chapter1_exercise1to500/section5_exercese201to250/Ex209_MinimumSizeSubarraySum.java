@@ -13,31 +13,27 @@ If you have figured out the O(n) solution, try coding another solution of which 
 * */
 public class Ex209_MinimumSizeSubarraySum {
     //滑动窗口问题
+
+    //用时3ms  击败37.09%
     public int minSubArrayLen(int s, int[] nums) {
         if(nums==null||nums.length==0)return 0;
         int st=0;
         int end=0;
         int sum=0;
-        //寻找包括 index=0的第一个子数组
+        int result=Integer.MAX_VALUE;
         for(int i=0;i<nums.length;i++){
             sum+=nums[i];
             end=i;
-            if(sum>=s)break;
-        }
-        //缩尾
-        while(sum-nums[st]>=s){
-            sum-=nums[st];
-            st++;
-        }
-        if(sum<s)return 0;
-        for(int i=end+1;i<nums.length;i++){
-            sum+=nums[i];
-            end=i;
-            while(sum-nums[st]>=s){
-                sum-=nums[st];
-                st++;
+            if(sum>=s) {
+                while (sum - nums[st] >= s) {
+                    sum -= nums[st];
+                    st++;
+                }
+                int value=end-st+1;
+                if(result>value)result=value;
             }
         }
-        return end-st+1;
+        if(sum<s)return 0;
+        return result;
     }
 }
