@@ -24,7 +24,7 @@ public class Ex222_CountCompleteTreeNodes {
     //如果直接BFS遍历整棵树可以得到 该树的节点数量，但是其实并不需要遍历整颗树也可以计算出节点数量
     //获得二叉树的高度h以及缺失的叶子节点m   2^h-1-m  为该满二叉树的节点数量
 
-    //暴力递归计算
+    //暴力递归计算  时间复杂度 O(n)
     //Oms  击败100% 测试用例不够科学  不应该击败100%
     public int countNodes(TreeNode root) {
         if(root==null)return 0;

@@ -25,6 +25,8 @@ public class Ex222_CountCompleteTreeNodes_2 {
 
     //性质1：获得二叉树的高度h以及缺失的叶子节点m   2^h-1-m  为该满二叉树的节点数量
     //性质2：左子树叶子节点不满，右子树叶子节点坑定也不满，左子树叶子节点满，右子树叶子节点不一定满
+
+    //binary search   时间复杂度  O(lg^2n)   深度lgn  比较此时最多O（lgn）
     public int countNodes(TreeNode root) {
         //最左边的节点高度树的高度
         int hight=0;
