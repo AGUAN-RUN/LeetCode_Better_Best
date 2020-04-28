@@ -18,21 +18,12 @@ Input: 218
 Output: false
 * */
 public class Ex231_PowerOfTwo_3 {
-    //使用 n&(n-1)的性质  算法时间空间复杂度都是  O(1)
+    //使用 n&(n-1)的性质会把n的二进制位最右边的一个1置为0的性质设计算法  算法时间空间复杂度都是  O(1)
 
     //用时1ms 击败100%
     public boolean isPowerOfTwo(int n) {
         if(n<1)return false;
-        if(n==1)return true;
-        int base=1;
-       for(int i=1;i<31;i++){
-           base=base<<1;
-           if(n<base){
-               return false;
-           }else if(n==base){
-               return true;
-           }
-       }
+       if((n&(n-1))==0)return true;
        return false;
     }
 }
