@@ -23,7 +23,7 @@ public class Ex240_SearchA2DMatrixII {
 
     //执行用时6ms  击败99.83%
     public boolean searchMatrix(int[][] matrix, int target) {
-        if(matrix==null||matrix.length==0||matrix[0].length==0||target<matrix[0][0]||target>matrix[matrix.length][matrix[0].length])return false;
+        if(matrix==null||matrix.length==0||matrix[0].length==0)return false;
         int m=matrix.length-1;
         int n=0;
         //由于左下角的元素对于一列是最大，对应一行是最小，可以根据目标值和这个元素的大小来对比
