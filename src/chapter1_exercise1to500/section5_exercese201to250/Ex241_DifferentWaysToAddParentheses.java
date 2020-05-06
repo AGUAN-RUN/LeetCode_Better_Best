@@ -24,7 +24,8 @@ Explanation:
 (((2*3)-4)*5) = 10
 * */
 public class Ex241_DifferentWaysToAddParentheses {
-    //目测 动态规划算法
+    /*分离出数字集和运算符号集合  递归计算    遍历符号集合，符号集合中每个符号做为最后一次运算的符号，都对应一个不同的优先集（不同的加括号方式）
+    然后对该符号左右的符号以及对应左右两边的数字进行递归*/
 
     //假如输入都是合法的
     public List<Integer> diffWaysToCompute(String input) {
@@ -55,8 +56,11 @@ public class Ex241_DifferentWaysToAddParentheses {
     public int getDiffWaysCompute(List<Integer>numsList,List<Character>smptList,int start,int end){
         if(start==end)return (int)numsList.get(start);
         for(int i=start;i<end;i++){
-            return caculateWorker(getDiffWaysCompute(numsList,smptList,0,i),getDiffWaysCompute(numsList,smptList,i+1,numsList.size()-1),smptList.get(i));
+             caculateWorker(getDiffWaysCompute(numsList,smptList,0,i),getDiffWaysCompute(numsList,smptList,i+1,numsList.size()-1),smptList.get(i));
         }
+
+
+
     }
     public int caculateWorker(int a,int b,char c){
         if(c=='+'){
