@@ -47,7 +47,7 @@ public class Ex241_DifferentWaysToAddParentheses {
             }
         }
         for(int i=0;i<numsList.size()-1;i++){
-           result.add(caculateWorker(getDiffWaysCompute(numsList,smptList,0,i),getDiffWaysCompute(numsList,smptList,i+1,numsList.size()-1),smptList.get(i)));
+        caculateWorker(getDiffWaysCompute(numsList,smptList,0,i),getDiffWaysCompute(numsList,smptList,i+1,numsList.size()-1),smptList.get(i)));
         }
         return result;
     }

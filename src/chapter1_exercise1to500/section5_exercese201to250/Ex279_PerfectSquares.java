@@ -18,6 +18,7 @@ public class Ex279_PerfectSquares {
     public int numSquares(int n) {
         int a=(int)Math.sqrt(n);
         if(a*a==n)return 1;
+        return -1;
     }
 
     public static void main(String[] args) {
