@@ -28,39 +28,66 @@ public class Ex241_DifferentWaysToAddParentheses {
     然后对该符号左右的符号以及对应左右两边的数字进行递归*/
 
     //假如输入都是合法的
+
+    //执行用时2ms  java击败86.78%
     public List<Integer> diffWaysToCompute(String input) {
         LinkedList<Integer>numsList=new LinkedList<>();
         LinkedList<Character>smptList=new LinkedList<>();
         List<Integer> result=new ArrayList<>();
         char[]chars=input.toCharArray();
-        //收集数据到List
+        //分别收集符号数据到List
         for(int i=0;i<chars.length;i++){
             if(chars[i]=='+'||chars[i]=='-'||chars[i]=='*'||chars[i]=='/'){
                 smptList.add(chars[i]);
             }else {
                 int value=chars[i]-'0';
-                while(i+1<chars.length&&chars[i+1]<'9'&&chars[i+1]>'0'){
+                while(i+1<chars.length&&chars[i+1]<='9'&&chars[i+1]>='0'){
                     i++;
                     value=value*10+chars[i]-'0';
                 }
                 numsList.add(value);
             }
         }
+        if(numsList.size()==1){
+            result.add(numsList.get(0));
+            return result;
+        }
+        List<Integer>left;
+        List<Integer>right;
+        //分治法➕递归求解
         for(int i=0;i<numsList.size()-1;i++){
-        caculateWorker(getDiffWaysCompute(numsList,smptList,0,i),getDiffWaysCompute(numsList,smptList,i+1,numsList.size()-1),smptList.get(i)));
+            left=getDiffWaysCompute(numsList,smptList,0,i-1);
+            right=getDiffWaysCompute(numsList,smptList,i+1,smptList.size()-1);
+            char sym=smptList.get(i);
+            for(int a:left){
+                for(int b:right){
+                    result.add(caculateWorker(a,b,sym));
+                }
+            }
         }
         return result;
     }
-    //这个方法需要改进    计算过的就不再参加计算
-    Map<Integer,Map<Integer,Integer>>map=new HashMap<>();
-    public int getDiffWaysCompute(List<Integer>numsList,List<Character>smptList,int start,int end){
-        if(start==end)return (int)numsList.get(start);
-        for(int i=start;i<end;i++){
-             caculateWorker(getDiffWaysCompute(numsList,smptList,0,i),getDiffWaysCompute(numsList,smptList,i+1,numsList.size()-1),smptList.get(i));
+
+    public List<Integer> getDiffWaysCompute(List<Integer>numsList,List<Character>smptList,int start,int end){
+        List<Integer> result = new ArrayList<>();
+        //一定要分析清楚分治递归的过程  以及递归结束条件是否正确
+        if(start>end){
+            result.add(numsList.get(start));
+            return result;
         }
-
-
-
+        List<Integer>left;
+        List<Integer>right;
+        for(int i=start;i<=end;i++){
+            left=getDiffWaysCompute(numsList,smptList,start,i-1);
+            right=getDiffWaysCompute(numsList,smptList,i+1,end);
+            char sym=smptList.get(i);
+            for(int a:left){
+                for(int b:right){
+                    result.add(caculateWorker(a,b,sym));
+                }
+            }
+        }
+        return result;
     }
     public int caculateWorker(int a,int b,char c){
         if(c=='+'){
@@ -72,5 +99,15 @@ public class Ex241_DifferentWaysToAddParentheses {
         }else{
             return a/b;
         }
+    }
+
+    public static void main(String[] args) {
+        String s="10+5";
+        Ex241_DifferentWaysToAddParentheses test=new Ex241_DifferentWaysToAddParentheses();
+        List<Integer>list=test.diffWaysToCompute(s);
+        for(int a:list){
+            System.out.println(a);
+        }
+
     }
 }
