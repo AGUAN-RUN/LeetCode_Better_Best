@@ -23,7 +23,7 @@ public class Ex279_PerfectSquares_3 {
     //贪心算法 + BFS  与方法2相比避免了很多不必要的运算
     //根据数学定理  由于每个数都可以用四个以内的平方数之和表示  所以最多进行四次递归
 
-    //用时 47ms  击败44.48%  
+    //用时 47ms  击败44.48%
     public int numSquares(int n) {
         //初始化俩个辅助数组
         Set<Integer> set = new HashSet<>();
