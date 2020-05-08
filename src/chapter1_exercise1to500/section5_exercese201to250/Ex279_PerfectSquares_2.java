@@ -20,7 +20,7 @@ Explanation: 13 = 4 + 9.
 * */
 public class Ex279_PerfectSquares_2 {
     //动态规划求解  优化1  用一个数组来缓存已经计算的 n；再用一个数组保存小于等于n的所有平方数
-
+    //递归问题先建立  递归表达式
     //用时120ms  java击败19.30%
     public int numSquares(int n) {
         //初始化俩个辅助数组
