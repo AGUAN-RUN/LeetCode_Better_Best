@@ -19,14 +19,30 @@ Explanation: 13 = 4 + 9.
 * */
 public class Ex279_PerfectSquares_4 {
     //数学公式法  每个自然数数都可以用四个以内的自然数平方之和
-    //n 的形式是 n = 4^{k}(8m+7)，那么 n 不能分解为 3 个自然数的平方的和  只能分解为自然数的平方的和
+    //n 的形式是 n = 4^{k}(8m+7)，那么 n 不能分解为 3 个自然数的平方的和  只能分解为四个自然数的平方的和
 
-    //用时 1ms  java击败100%
+    //用时 1ms  java击败100% nice!
     public int numSquares(int n) {
-        int m=n;
-        if(m%4==0){
+        //判断m是不是本身就是 一个整数的平方
+        if(n==Math.pow((int)Math.sqrt(n),2))return 1;
 
+        //判断 m 是不是只能拆四个整数的平方
+        int m=n;
+        if(m%8==7)return 4;
+        while (m%4 == 0 && m != 1){
+            m/=4;
+            if(m%8==7)return 4;
         }
 
+        //判断 m 是不是能拆两个 整数的平方
+
+        for(int i=(int)Math.sqrt(n);i>0;i--){
+           int value=i*i;
+           int subval=n-i*i;
+           if(subval>value)break;
+           if(subval==(Math.pow((int)Math.sqrt(subval),2)))return 2;
+        }
+
+        return 3;
     }
 }
