@@ -1,4 +1,4 @@
-package chapter1_exercise1to500.section5_exercese201to250;
+package chapter1_exercise1to500.section6_exercese251to300;
 /*
 You are a product manager and currently leading a team to develop a new product.
 Unfortunately, the latest version of your product fails the quality check.
@@ -21,10 +21,10 @@ Then 4 is the first bad version. 
 
 ///* The isBadVersion API is defined in the parent class VersionControl.
 //      boolean isBadVersion(int version); */
-public class Ex278_FirstBadVersion_2 {
-    //二分法优化  写出更加简洁而又优雅的二分代码  好好学习以后二分都这样写，简明扼要
+public class Ex278_FirstBadVersion_3 {
+    //再优化
 
-    //依然40ms  击败5%
+    //用时16ms  击败 87.27%
     public int firstBadVersion(int n) {
         int st=1;
         int end=n;
@@ -32,9 +32,9 @@ public class Ex278_FirstBadVersion_2 {
         while(st<end){
             //寻找中点，对于偶数位 取靠左边的中点  这种写法和上一种相比较 索引不会由于加法产生溢出
             int mid=st+(end-st)/2;
-            if(isBadVersion(mid)&&!isBadVersion(mid-1)){
-                return mid;
-            }else if(isBadVersion(mid)&&isBadVersion(mid-1)){
+
+            //去掉冗余的判断版本好坏的部分  只需判断mid版本的好坏  最终找到的left就是第一个坏掉的版本
+           if(isBadVersion(mid)){
                 end=mid;
             }else {
                 //子循环  确保循环会终止

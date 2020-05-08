@@ -1,4 +1,4 @@
-package chapter1_exercise1to500.section5_exercese201to250;
+package chapter1_exercise1to500.section6_exercese251to300;
 
 import java.util.HashMap;
 import java.util.Map;

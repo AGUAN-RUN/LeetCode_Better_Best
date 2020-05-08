@@ -1,8 +1,7 @@
-package chapter1_exercise1to500.section5_exercese201to250;
+package chapter1_exercise1to500.section6_exercese251to300;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
 /*
 Given an Iterator class interface with methods: next() and hasNext(), design and implement a PeekingIterator that support the peek() operation -- it essentially peek() at the element that will be returned by the next call to next().

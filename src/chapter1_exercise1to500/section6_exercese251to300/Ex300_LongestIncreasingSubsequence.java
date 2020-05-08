@@ -1,9 +1,4 @@
-package chapter1_exercise1to500.section5_exercese201to250;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+package chapter1_exercise1to500.section6_exercese251to300;
 
 /*
 Given an unsorted array of integers, find the length of longest increasing subsequence.
@@ -21,9 +16,8 @@ Follow up: Could you improve it to O(n log n) time complexity?
 * */
 public class Ex300_LongestIncreasingSubsequence {
 
-    public int lengthOfLIS(int[] nums) {
-        return  1;
-    }
+    public int lengthOfLIS(int[] nums){
 
+    }
 
 }

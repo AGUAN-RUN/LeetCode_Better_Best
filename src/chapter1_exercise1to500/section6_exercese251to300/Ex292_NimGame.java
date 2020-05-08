@@ -1,4 +1,4 @@
-package chapter1_exercise1to500.section5_exercese201to250;
+package chapter1_exercise1to500.section6_exercese251to300;
 /*
 You are playing the following Nim Game with your friend: There is a heap of stones on the table,
 each time one of you take turns to remove 1 to 3 stones. The one who removes the last stone will be the winner.

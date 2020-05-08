@@ -1,7 +1,4 @@
-package chapter1_exercise1to500.section5_exercese201to250;
-
-import java.util.HashMap;
-import java.util.Map;
+package chapter1_exercise1to500.section6_exercese251to300;
 
 /*
 Given an array of numbers nums, in which exactly two elements appear only once and all the other elements appear exactly twice.

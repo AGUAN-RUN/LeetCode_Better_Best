@@ -1,4 +1,4 @@
-package chapter1_exercise1to500.section5_exercese201to250;
+package chapter1_exercise1to500.section6_exercese251to300;
 /*
 Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
 

@@ -1,4 +1,4 @@
-package chapter1_exercise1to500.section5_exercese201to250;
+package chapter1_exercise1to500.section6_exercese251to300;
 /*
 Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
 

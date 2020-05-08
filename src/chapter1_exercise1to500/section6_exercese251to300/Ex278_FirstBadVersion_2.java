@@ -1,4 +1,4 @@
-package chapter1_exercise1to500.section5_exercese201to250;
+package chapter1_exercise1to500.section6_exercese251to300;
 /*
 You are a product manager and currently leading a team to develop a new product.
 Unfortunately, the latest version of your product fails the quality check.
@@ -21,27 +21,27 @@ Then 4 is the first bad version. 
 
 ///* The isBadVersion API is defined in the parent class VersionControl.
 //      boolean isBadVersion(int version); */
-public class Ex278_FirstBadVersion{
-    //二分法  用时39.5ms  击败5%
+public class Ex278_FirstBadVersion_2 {
+    //二分法优化  写出更加简洁而又优雅的二分代码  好好学习以后二分都这样写，简明扼要
+
+    //依然40ms  击败5%
     public int firstBadVersion(int n) {
-        if(n==1)return 1;
-        //isBadVersion这里暂用下面定义的isBadVersion方法定义
-        if(isBadVersion(1))return 1;
-        if(isBadVersion(n)&&!isBadVersion(n-1))return n;
-        //为了防止溢出采用了 long类型
-        long st=1;
-        long end=(long)n;
-        while(st+1<end){
-            long mid=(st+end)/2;
-            if(isBadVersion((int)mid)&&!isBadVersion((int)mid-1)){
-                return (int)mid;
-            }else if(isBadVersion((int)mid)&&isBadVersion((int)mid-1)){
+        int st=1;
+        int end=n;
+
+        while(st<end){
+            //寻找中点，对于偶数位 取靠左边的中点  这种写法和上一种相比较 索引不会由于加法产生溢出
+            int mid=st+(end-st)/2;
+            if(isBadVersion(mid)&&!isBadVersion(mid-1)){
+                return mid;
+            }else if(isBadVersion(mid)&&isBadVersion(mid-1)){
                 end=mid;
             }else {
-                st=mid;
+                //子循环  确保循环会终止
+                st=mid+1;
             }
         }
-        return -1;
+        return st;
     }
     //这个没有
     public boolean isBadVersion(int n){

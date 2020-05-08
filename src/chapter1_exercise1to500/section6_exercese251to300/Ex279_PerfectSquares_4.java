@@ -1,7 +1,4 @@
-package chapter1_exercise1to500.section5_exercese201to250;
-
-import java.util.HashSet;
-import java.util.Set;
+package chapter1_exercise1to500.section6_exercese251to300;
 
 /*
 Given a positive integer n, find the least number of perfect square numbers (for example, 1, 4, 9, 16, ...) which sum to n.
