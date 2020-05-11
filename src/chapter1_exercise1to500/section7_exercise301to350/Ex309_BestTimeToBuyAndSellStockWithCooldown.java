@@ -27,7 +27,7 @@ public class Ex309_BestTimeToBuyAndSellStockWithCooldown {
                 if(i>=upDown.length-2 || upDown[i+1] >=0 || upDown[i+2]<0) {
                     profit+=upDown[i];
                 }else if(){
-                    profit+=
+                      profit+=
                 }
             }
         }
