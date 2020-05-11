@@ -34,6 +34,6 @@ public class Ex242_ValidAnagram {
         for(int i=0;i<n1.length;i++){
             if(n1[i]!=n2[i])return false;
         }
-        return true;
+         return true;
     }
 }
