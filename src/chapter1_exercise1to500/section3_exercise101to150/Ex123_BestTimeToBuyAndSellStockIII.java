@@ -9,7 +9,7 @@ Note: You may not engage in multiple transactions at the same time (i.e., you m
 public class Ex123_BestTimeToBuyAndSellStockIII {
     //先来个暴力的解法
 
-    //时间复杂度 O(n^4) 时间复杂度太高，对于比较大的输入规模n，算法需要很长的运行时间
+    //时间复杂度 O(n^4) 时间复杂度太高， 对于比较大的输入规模n，算法需要很长的运行时间
     //尝试优化时间复杂度到 O(n^2)
     public int maxProfit(int[] prices) {
         if(prices==null||prices.length<2)return 0;
