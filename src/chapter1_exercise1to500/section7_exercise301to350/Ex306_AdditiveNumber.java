@@ -35,38 +35,39 @@ public class Ex306_AdditiveNumber {
     public boolean isAdditiveNumber(String num) {
         if(num==null||num.length()<3)return false;
         char[]nums=num.toCharArray();
-        int a=nums[0]-'0';
-        int b=0;
+        //用long  尽量避免运算产生溢出
+        long a=nums[0]-'0';
+        long b=0;
         for(int i=1;i<nums.length-1;i++){
-            if(nums[i] == 0){
-                a*=10;
-                i++;
-            }
             if(i>=nums.length-i)break;
             for(int j=i;j<nums.length;j++){
-                b=b*10+nums[j]-'0';
-                if(j+1<nums.length&&nums[j+1]==0){
-                    b*=10;
-                    j++;
-                }
-                int c=a;
-                int d=b;
+                b=b*10+(int)(nums[j]-'0');
+                long c=a;
+                long d=b;
                 if(nums.length-j < j-i || nums.length-j<i)break;
                 //满足条件之后  尝试迭代，不满足就回溯
-                int value=0;
+                long value=0;
+                int start=j+1;
                 for(int k=j+1;k<nums.length;k++){
-                    value=value*10+nums[k]-'0';
+                    value=value*10+(int)(nums[k]-'0');
                     if(value == c+d){
                         c=d;
                         d=value;
                         value=0;
+                        start=k+1;
+                        if(k == nums.length-1)return true;
                     }else if(value > c+d){
                         break;
                     }
-                    if(k == nums.length-1)return true;
+                    //是零 则不拼
+                    if(nums[start] == '0' && value != c+d)break;
                 }
+                //是零 则不拼
+                if(nums[i] == '0')break;
             }
-            a=a*10+nums[i]-'0';
+            /*第一个是零，不能用0开头，不再迭代直接返回false*/
+            if(a == 0)return false;
+            a=a*10+(int)(nums[i]-'0');
             b=0;
         }
         return false;
