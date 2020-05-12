@@ -30,7 +30,7 @@ How would you handle overflow for very large input integers?
 public class Ex306_AdditiveNumber {
     //回溯法
 
-    //关键的点在于 确定第一个数和第二个数，  然后迭代
+    //关键的点在于 确定第一个数和第二个数，  然后迭代  注意迭代过程中，每个数可以是 0 但是不可以以零开头
     //暴力切分时间复杂度O(n^2)
     public boolean isAdditiveNumber(String num) {
         if(num==null||num.length()<3)return false;
