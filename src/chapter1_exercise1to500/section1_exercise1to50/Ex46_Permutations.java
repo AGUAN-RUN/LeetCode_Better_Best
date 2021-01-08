@@ -3,7 +3,24 @@ package chapter1_exercise1to500.section1_exercise1to50;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+/*
+给定一个 没有重复 数字的序列，返回其所有可能的全排列。
 
+示例:
+
+输入: [1,2,3]
+输出:
+[
+  [1,2,3],
+  [1,3,2],
+  [2,1,3],
+  [2,3,1],
+  [3,1,2],
+  [3,2,1]
+]
+
+
+* */
 public class Ex46_Permutations {
     //递归与  链表(链表的删除操作时间复杂度为O(1))
     public List<List<Integer>> permute(int[] nums) {

@@ -5,6 +5,27 @@ import sun.reflect.generics.tree.Tree;
 
 /*Given preorder and inorder traversal of a tree, construct the binary tree.
 * You may assume that duplicates do not exist in the tree.*/
+
+/*
+根据一棵树的前序遍历与中序遍历构造二叉树。
+
+注意:
+你可以假设树中没有重复的元素。
+
+例如，给出
+
+前序遍历 preorder = [3,9,20,15,7]
+中序遍历 inorder = [9,3,15,20,7]
+返回如下的二叉树：
+
+    3
+   / \
+  9  20
+    /  \
+   15   7
+
+
+* */
 public class Ex105_ConstructBinaryTreeFromPreorderAndInorderTraversal {
     //单单从一个二叉树的前中或后序排序中，不能唯一还原成的原来的树，因为这个排序可能可以构造出多个不同的树 如 [4，5，6，8]
     //二叉搜索树同上

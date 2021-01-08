@@ -39,7 +39,7 @@ public class Ex204_CountPrimes {
     //空间换时间
     //用时14ms  击败89%的提交
     public int countPrimes(int n) {
-        boolean [] isNotPrimes=new boolean[n];
+        boolean [] isNotPrimes=new boolean[n];//从2到n-1的n-1个数组下标代表2到n-1的每个整数，数组值为true代表该数是素数
         int max=(int)Math.sqrt(n);  //这里由于转化为int 向下取整 会有误差，所以用迭代是 i<=max 而不是 i<max
         for(int i=2;i<=max;i++){
             if(isNotPrimes[i]==false){
@@ -51,6 +51,7 @@ public class Ex204_CountPrimes {
             }
         }
         int nums=0;
+        //由于最小的质数是2
         for(int i=2;i<isNotPrimes.length;i++){
             if(isNotPrimes[i]==false)nums++;
         }
@@ -60,5 +61,6 @@ public class Ex204_CountPrimes {
     public static void main(String[] args) {
         Ex204_CountPrimes test=new Ex204_CountPrimes();
         test.countPrimes(10);
+        System.out.println(Math.sqrt(7));
     }
 }

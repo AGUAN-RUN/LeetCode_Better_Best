@@ -15,7 +15,7 @@ s = "3[a2[c]]", return "accaccacc".
 s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 * */
 public class Ex394_DecodeString {
-    public String decodeString(String s) {
+   /* public String decodeString(String s) {
         if(s == null || s.equals(""))return s;
         char[] strs = s.toCharArray();
         StringBuilder sb = new StringBuilder();
@@ -23,5 +23,5 @@ public class Ex394_DecodeString {
             int index = strs[i]-'0';
 
         }
-    }
+    }*/
 }

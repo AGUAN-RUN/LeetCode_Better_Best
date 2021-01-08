@@ -3,7 +3,21 @@ package chapter1_exercise1to500.section2_exercise51to100;
 /*
 给定一个正整数 n，生成一个包含 1 到 n2 所有元素，且元素按顺时针顺序螺旋排列的正方形矩阵。
 */
+/*
+给定一个正整数 n，生成一个包含 1 到 n2 所有元素，且元素按顺时针顺序螺旋排列的正方形矩阵。
 
+示例:
+
+输入: 3
+输出:
+[
+ [ 1, 2, 3 ],
+ [ 8, 9, 4 ],
+ [ 7, 6, 5 ]
+]
+
+
+* */
 public class Ex59_SpiralMatrixII {
     //把矩阵分解成一个一个圈来分别填充数字
         public int[][] generateMatrix(int n) {
