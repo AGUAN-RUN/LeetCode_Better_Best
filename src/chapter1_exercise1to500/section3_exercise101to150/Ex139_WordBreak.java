@@ -32,9 +32,6 @@ You may assume the dictionary does not contain duplicate words.
 
 输入: s = "catsandog", wordDict = ["cats", "dog", "sand", "and", "cat"]
 输出: false
-通过次数107,963提交次数222,001
-
-
 * */
 public class Ex139_WordBreak {
     public boolean wordBreak(String s, List<String> wordDict) {

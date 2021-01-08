@@ -12,6 +12,14 @@ Example:
 Input:  1->2->6->3->4->5->6, val = 6
 Output: 1->2->3->4->5
 */
+/*
+删除链表中等于给定值 val 的所有节点。
+
+示例:
+
+输入: 1->2->6->3->4->5->6, val = 6
+输出: 1->2->3->4->5
+* */
 public class Ex203_RemoveLinkedListElements {
     //用时1ms  击败99.9 的提交
     public ListNode removeElements(ListNode head, int val) {
