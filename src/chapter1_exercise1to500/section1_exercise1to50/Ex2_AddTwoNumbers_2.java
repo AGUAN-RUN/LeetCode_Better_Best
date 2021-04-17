@@ -31,4 +31,8 @@ public class Ex2_AddTwoNumbers_2 {
             result.next = new ListNode(1);
         return resultNode;
     }
+
+    public static void main(String[] args) {
+        System.out.println(1);
+    }
 }
