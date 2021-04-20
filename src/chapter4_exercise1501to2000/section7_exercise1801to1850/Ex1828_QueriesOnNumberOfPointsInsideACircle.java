@@ -1,4 +1,4 @@
-package competition.week5701to5750;
+package chapter4_exercise1501to2000.section7_exercise1801to1850;
 /*英文题述*/
 /*
 You are given an array points where points[i] = [xi, yi] is the coordinates of the ith point on a 2D plane. Multiple points can have the same coordinates.
@@ -64,7 +64,7 @@ queries[j].length == 3
 所有的坐标都是整数。
 * */
 
-public class Cp5718_QueriesOnNumberOfPointsInsideACircle {
+public class Ex1828_QueriesOnNumberOfPointsInsideACircle {
 
     public int[] countPoints(int[][] points, int[][] queries) {
         int[]res=new int[queries.length];

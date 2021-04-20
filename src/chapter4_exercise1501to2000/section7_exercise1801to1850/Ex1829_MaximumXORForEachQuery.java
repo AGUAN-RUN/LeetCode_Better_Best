@@ -1,4 +1,4 @@
-package competition.week5701to5750;
+package chapter4_exercise1501to2000.section7_exercise1801to1850;
 /*英文题述*/
 /*
 You are given a sorted array nums of n non-negative integers and an integer maximumBit. You want to perform the following query n times:
@@ -84,7 +84,7 @@ nums.length == n
 0 <= nums[i] < 2maximumBit
 nums​​​ 中的数字已经按 升序 排好序。
 * */
-public class Cp5719_MaximumXORForEachQuery {
+public class Ex1829_MaximumXORForEachQuery {
 
     public int[] getMaximumXor(int[] nums, int maximumBit) {
         if(nums == null || nums.length == 0)return null;

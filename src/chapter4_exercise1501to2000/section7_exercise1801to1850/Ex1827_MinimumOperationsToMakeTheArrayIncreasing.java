@@ -1,4 +1,4 @@
-package competition.week5701to5750;
+package chapter4_exercise1501to2000.section7_exercise1801to1850;
 
 /*英文题述*/
 /*
@@ -63,7 +63,7 @@ Constraints:
 1 <= nums[i] <= 104
 * */
 
-public class Cp5717_MinimumOperationsToMakeTheArrayIncreasing {
+public class Ex1827_MinimumOperationsToMakeTheArrayIncreasing {
     public int minOperations(int[] nums) {
         if(nums == null || nums.length < 2)return 0;
         int res=0;
